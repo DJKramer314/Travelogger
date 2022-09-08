@@ -14,7 +14,21 @@ struct VisitSelectionView: View {
     var body: some View {
 		ZStack{
 			Color.accentColor
-			Text(appData.currentView)
-		}
+			VStack(spacing: 50) {
+				ZStack {
+					RoundedRectangle(cornerRadius: 25)
+						.foregroundColor(Color.white)
+					Text("Test")
+				}
+				.frame(height:100)
+				ZStack {
+					RoundedRectangle(cornerRadius: 25)
+						.foregroundColor(Color.white)
+					Text("Test")
+				}
+				.frame(height:100)
+			}
+			.padding(50)
+		}.edgesIgnoringSafeArea(.all)
     }
 }
