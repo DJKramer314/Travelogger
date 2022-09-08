@@ -6,30 +6,39 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct HomePageView: View {
-    
+	//This below variable is a state variable because it binds to the view when it moves. It will reset itself after each relaunch of the app
+    @State var coordinates = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
     
     //Start of global variables
-    let buttonSize: CGFloat = 45
+    let buttonSize: CGFloat = 35
+	let topBarHeight: CGFloat = 120
+	let bottomPadding: CGFloat = 40
     
     var body: some View {
-        VStack {
-            StatsBarView()
-            
-            Spacer()
-            
-            VStack(spacing: 30) {
-                
-                TopRowOfButtonsView(size: buttonSize).padding(buttonSize)
-                
-				LogButtonView(size: buttonSize+25)
-                
-                BottomRowOfButtonsView(size: buttonSize).padding(buttonSize)
-                
-            }
-        }
-        .edgesIgnoringSafeArea(.all)
+		ZStack {
+			
+			Map(coordinateRegion: $coordinates)
+			
+			VStack {
+				StatsBarView(topBarHeight: topBarHeight)
+				
+				Spacer()
+				
+				VStack(spacing: 30) {
+					
+					LogButtonView(size: buttonSize+25)
+					
+					BottomRowOfButtonsView(size: buttonSize)
+					
+				}
+				.padding(bottomPadding)
+				.foregroundColor(Color.accentColor)
+			}
+		}
+		.edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -43,53 +52,40 @@ struct HomePageView: View {
 
 
 struct StatsBarView: View {
+	
+	var topBarHeight: CGFloat
+	
     var body: some View {
         ZStack {
-            Rectangle()
-                .frame(width:.infinity, height:150)
-            HStack() {
-                VStack {
-                    Text("Locations")
-                    Text("15")
-                }
-                Spacer()
-                
-                VStack {
-                    Text("Misc")
-                    Text("8")
-                }
-                
-                Spacer()
-                
-                VStack {
-                    Text("Countries")
-                    Text("3")
-                }
-            }
-            .padding()
-            .foregroundColor(Color.white)
+			
+			Rectangle()
+				.foregroundColor(Color.accentColor)
+			VStack {
+				Spacer()
+				HStack {
+					VStack {
+						Text("Locations")
+						Text("15")
+					}
+					Spacer()
+					
+					VStack {
+						Text("Misc")
+						Text("8")
+					}
+					
+					Spacer()
+					
+					VStack {
+						Text("Countries")
+						Text("3")
+					}
+				}
+				.padding()
+				.foregroundColor(Color.white)
+			}
         }
-    }
-}
-
-struct TopRowOfButtonsView: View {
-    
-    let size: CGFloat
-    
-    var body: some View {
-        HStack {
-            
-            Image(systemName: "location")
-                .resizable()
-                .frame(width: size, height: size)
-        
-            Spacer()
-        
-            Image(systemName: "clock")
-                .resizable()
-                .frame(width: size, height: size)
-            
-        }
+		.frame(height:topBarHeight)
     }
 }
 
@@ -98,7 +94,16 @@ struct LogButtonView: View {
 	let size: CGFloat
 	
     var body: some View {
-		Text("Log")
+		Button(action: {
+			print("pressed")
+		}){
+			ZStack {
+				RoundedRectangle(cornerRadius: 25)
+					.frame(height:size)
+				Text("Log new visit")
+					.foregroundColor(Color.white)
+			}
+		}
     }
 }
 
@@ -108,25 +113,42 @@ struct BottomRowOfButtonsView: View {
     
     var body: some View {
         HStack {
+			
+			Image(systemName: "questionmark.circle.fill")
+				.resizable()
+				.frame(width: size, height: size)
             
-            Image(systemName: "gearshape")
+			Spacer()
+			
+            Image(systemName: "gearshape.fill")
                 .resizable()
                 .frame(width: size, height: size)
         
             Spacer()
-        
-            Image(systemName: "questionmark.circle")
-                .resizable()
-                .frame(width: size, height: size)
+			
+			Image(systemName: "location.fill")
+				.resizable()
+				.frame(width: size, height: size)
+		
+			Spacer()
+		
+			Image(systemName: "clock.fill")
+				.resizable()
+				.frame(width: size, height: size)
             
         }
+		.padding(.bottom)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomePageView()
+		HomePageView()
+			.preferredColorScheme(.light)
 			.previewInterfaceOrientation(.portrait)
             
     }
 }
+
+
+
