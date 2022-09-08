@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		FC34F57728C9803D00B97A95 /* TraveloggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */; };
 		FC34F57828C9803D00B97A95 /* TraveloggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */; };
-		FC34F57928C9803D00B97A95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56828C9803A00B97A95 /* ContentView.swift */; };
-		FC34F57A28C9803D00B97A95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56828C9803A00B97A95 /* ContentView.swift */; };
+		FC34F57928C9803D00B97A95 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56828C9803A00B97A95 /* HomePageView.swift */; };
+		FC34F57A28C9803D00B97A95 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56828C9803A00B97A95 /* HomePageView.swift */; };
 		FC34F57B28C9803D00B97A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC34F56928C9803D00B97A95 /* Assets.xcassets */; };
 		FC34F57C28C9803D00B97A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC34F56928C9803D00B97A95 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraveloggerApp.swift; sourceTree = "<group>"; };
-		FC34F56828C9803A00B97A95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FC34F56828C9803A00B97A95 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		FC34F56928C9803D00B97A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC34F56E28C9803D00B97A95 /* Travelogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC34F57428C9803D00B97A95 /* Travelogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,12 +50,13 @@
 				FC34F56F28C9803D00B97A95 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		FC34F56628C9803A00B97A95 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */,
-				FC34F56828C9803A00B97A95 /* ContentView.swift */,
+				FC34F56828C9803A00B97A95 /* HomePageView.swift */,
 				FC34F56928C9803D00B97A95 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -176,7 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC34F57928C9803D00B97A95 /* ContentView.swift in Sources */,
+				FC34F57928C9803D00B97A95 /* HomePageView.swift in Sources */,
 				FC34F57728C9803D00B97A95 /* TraveloggerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC34F57A28C9803D00B97A95 /* ContentView.swift in Sources */,
+				FC34F57A28C9803D00B97A95 /* HomePageView.swift in Sources */,
 				FC34F57828C9803D00B97A95 /* TraveloggerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +316,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -328,7 +331,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -345,6 +348,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -358,7 +363,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
