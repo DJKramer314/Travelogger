@@ -11,6 +11,8 @@
 		FC34F57928C9803D00B97A95 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F56828C9803A00B97A95 /* HomePageView.swift */; };
 		FC34F57B28C9803D00B97A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC34F56928C9803D00B97A95 /* Assets.xcassets */; };
 		FC34F58828CA2A2C00B97A95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC34F58728CA2A2C00B97A95 /* MapKit.framework */; };
+		FC34F58A28CAA70900B97A95 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F58928CAA70900B97A95 /* AppData.swift */; };
+		FC34F58C28CAAA2500B97A95 /* VisitSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F58B28CAAA2500B97A95 /* VisitSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		FC34F56E28C9803D00B97A95 /* Travelogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC34F58528CA2A2C00B97A95 /* Travelogger--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Travelogger--iOS--Info.plist"; sourceTree = "<group>"; };
 		FC34F58728CA2A2C00B97A95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		FC34F58928CAA70900B97A95 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		FC34F58B28CAAA2500B97A95 /* VisitSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +53,9 @@
 			isa = PBXGroup;
 			children = (
 				FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */,
+				FC34F58928CAA70900B97A95 /* AppData.swift */,
 				FC34F56828C9803A00B97A95 /* HomePageView.swift */,
+				FC34F58B28CAAA2500B97A95 /* VisitSelectionView.swift */,
 				FC34F56928C9803D00B97A95 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -142,6 +148,8 @@
 			files = (
 				FC34F57928C9803D00B97A95 /* HomePageView.swift in Sources */,
 				FC34F57728C9803D00B97A95 /* TraveloggerApp.swift in Sources */,
+				FC34F58C28CAAA2500B97A95 /* VisitSelectionView.swift in Sources */,
+				FC34F58A28CAA70900B97A95 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

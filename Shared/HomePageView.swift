@@ -11,6 +11,9 @@ import MapKit
 struct HomePageView: View {
 	//This below variable is a state variable because it binds to the view when it moves. It will reset itself after each relaunch of the app
     @State var coordinates = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+	
+	//Inherited from 'TraveloggerApp'
+	@EnvironmentObject var appData: AppData
     
     //Start of global variables
     let buttonSize: CGFloat = 35
@@ -29,7 +32,7 @@ struct HomePageView: View {
 				
 				VStack(spacing: 30) {
 					
-					LogButtonView(size: buttonSize+25)
+					LogButtonView(size: buttonSize+25, appData: appData)
 					
 					BottomRowOfButtonsView(size: buttonSize)
 					
@@ -92,10 +95,11 @@ struct StatsBarView: View {
 struct LogButtonView: View {
 	
 	let size: CGFloat
+	var appData: AppData
 	
     var body: some View {
 		Button(action: {
-			print("pressed")
+			appData.changeViewTo("VisitSelectionView")
 		}){
 			ZStack {
 				RoundedRectangle(cornerRadius: 25)
