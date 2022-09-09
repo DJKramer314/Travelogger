@@ -16,16 +16,20 @@ struct VisitSelectionView: View {
 			Color.accentColor
 			
 			VStack{
-				Button(action:{
-					appData.changeViewTo("HomePageView")
-				}) {
-					Image(systemName:"house.fill")
-						.resizable()
-						.frame(width:50,height:50)
-					.foregroundColor(Color.white)
+				HStack {
+					Spacer()
+					
+					Button(action:{
+						appData.changeViewTo("HomePageView")
+					}) {
+						Image(systemName:"house.fill")
+							.resizable()
+							.frame(width:35,height:35)
+						.foregroundColor(Color.white)
+					}
 				}
 				Spacer()
-			}.padding(75)
+			}.padding(.top, 50).padding(.trailing, 25)
 			
 			VStack(spacing: 50) {
 				ZStack {
