@@ -34,7 +34,7 @@ struct HomePageView: View {
 					
 					LogButtonView(size: buttonSize+25, appData: appData)
 					
-					BottomRowOfButtonsView(size: buttonSize)
+					BottomRowOfButtonsView(size: buttonSize, appData: appData)
 					
 				}
 				.padding(bottomPadding)
@@ -114,31 +114,41 @@ struct LogButtonView: View {
 struct BottomRowOfButtonsView: View {
     
     let size: CGFloat
+	var appData: AppData
     
     var body: some View {
         HStack {
+			Button(action:{appData.changeViewTo("HelpView")}) {
+				Image(systemName: "questionmark.circle.fill")
+					.resizable()
+					.frame(width: size, height: size)
+			}
 			
-			Image(systemName: "questionmark.circle.fill")
-				.resizable()
-				.frame(width: size, height: size)
             
 			Spacer()
-			
-            Image(systemName: "gearshape.fill")
-                .resizable()
-                .frame(width: size, height: size)
+			Button(action:{appData.changeViewTo("SettingsView")}) {
+				Image(systemName: "gearshape.fill")
+					.resizable()
+					.frame(width: size, height: size)
+			}
         
             Spacer()
-			
-			Image(systemName: "location.fill")
-				.resizable()
-				.frame(width: size, height: size)
+			Button(action:{appData.changeViewTo("NavigationView")}) {
+				
+				Image(systemName: "location.fill")
+					.resizable()
+					.frame(width: size, height: size)
+				
+			}
 		
 			Spacer()
-		
-			Image(systemName: "clock.fill")
-				.resizable()
-				.frame(width: size, height: size)
+			Button(action:{appData.changeViewTo("CollectionsView")}) {
+				
+				Image(systemName: "clock.fill")
+				 .resizable()
+				 .frame(width: size, height: size)
+				
+			}
             
         }
 		.padding(.bottom)
