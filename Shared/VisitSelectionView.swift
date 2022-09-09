@@ -14,6 +14,19 @@ struct VisitSelectionView: View {
     var body: some View {
 		ZStack{
 			Color.accentColor
+			
+			VStack{
+				Button(action:{
+					appData.changeViewTo("HomePageView")
+				}) {
+					Image(systemName:"house.fill")
+						.resizable()
+						.frame(width:50,height:50)
+					.foregroundColor(Color.white)
+				}
+				Spacer()
+			}.padding(75)
+			
 			VStack(spacing: 50) {
 				ZStack {
 					RoundedRectangle(cornerRadius: 25)
