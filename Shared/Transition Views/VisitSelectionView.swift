@@ -19,29 +19,26 @@ struct VisitSelectionView: View {
 				HStack {
 					Spacer()
 					
-					Button(action:{
-						appData.changeViewTo("HomePageView")
-					}) {
-						Image(systemName:"house.fill")
-							.resizable()
-							.frame(width:35,height:35)
-						.foregroundColor(Color.white)
-					}
+					HomeButtonView(appData: appData, color: .white)
 				}
 				Spacer()
 			}.padding(.top, 50).padding(.trailing, 25)
 			
 			VStack(spacing: 50) {
-				ZStack {
-					RoundedRectangle(cornerRadius: 25)
-						.foregroundColor(Color.white)
-					Text("Test")
+				Button(action:{appData.changeViewTo("LogNewVisitView")}) {
+					ZStack {
+						RoundedRectangle(cornerRadius: 25)
+							.foregroundColor(Color.white)
+						Text("Log a visit in a new location")
+					}
 				}
 				.frame(height:100)
-				ZStack {
-					RoundedRectangle(cornerRadius: 25)
-						.foregroundColor(Color.white)
-					Text("Test")
+				Button(action:{appData.changeViewTo("LogExistingVisitView")}) {
+					ZStack {
+						RoundedRectangle(cornerRadius: 25)
+							.foregroundColor(Color.white)
+						Text("Log a visit in an existing location")
+					}
 				}
 				.frame(height:100)
 			}

@@ -12,6 +12,7 @@ struct SettingsView: View {
 	@EnvironmentObject var appData: AppData
 	
     var body: some View {
+		HomeButtonView(appData: appData, color: .accentColor)
 		Text("Settings View Placeholder")
     }
 }

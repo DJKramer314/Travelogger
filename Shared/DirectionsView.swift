@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct NavigationView: View {
+struct DirectionsView: View {
 	
 	@EnvironmentObject var appData: AppData
 	
     var body: some View {
-		Text("Navigation View Placeholder")
+		HomeButtonView(appData: appData, color: .accentColor)
+		Text("Directions View Placeholder")
     }
 }
 
-struct NavigationView_Previews: PreviewProvider {
+struct DirectionsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView()
+        DirectionsView()
     }
 }

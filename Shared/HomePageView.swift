@@ -23,7 +23,9 @@ struct HomePageView: View {
     var body: some View {
 		ZStack {
 			
-			Map(coordinateRegion: $coordinates)
+			Map(coordinateRegion: $coordinates, annotationItems: appData.visits) { visit in
+				MapMarker(coordinate:visit.coordinates)
+			}
 			
 			VStack {
 				StatsBarView(topBarHeight: topBarHeight)
@@ -133,7 +135,7 @@ struct BottomRowOfButtonsView: View {
 			}
         
             Spacer()
-			Button(action:{appData.changeViewTo("NavigationView")}) {
+			Button(action:{appData.changeViewTo("DirectionsView")}) {
 				
 				Image(systemName: "location.fill")
 					.resizable()

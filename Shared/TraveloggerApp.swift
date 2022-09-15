@@ -22,10 +22,12 @@ struct TraveloggerApp: App {
 				SettingsView().environmentObject(appData)
 			} else if appData.currentView == "HelpView"{
 				HelpView().environmentObject(appData)
-			} else if appData.currentView == "NavigationView"{
-				NavigationView().environmentObject(appData)
+			} else if appData.currentView == "DirectionsView"{
+				DirectionsView().environmentObject(appData)
 			} else if appData.currentView == "CollectionsView"{
 				CollectionsView().environmentObject(appData)
+			} else if appData.currentView == "LogNewVisitView"{
+				LogNewVisitView().environmentObject(appData)
 			} else {
 				Text("Page not found: " + appData.currentView)
 			}

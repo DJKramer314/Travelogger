@@ -12,6 +12,7 @@ struct CollectionsView: View {
 	@EnvironmentObject var appData: AppData
 	
     var body: some View {
+		HomeButtonView(appData: appData, color: .accentColor)
         Text("Collections View Placeholder")
     }
 }

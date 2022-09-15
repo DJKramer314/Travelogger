@@ -16,7 +16,10 @@
 		FC34F58E28CAC5FD00B97A95 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F58D28CAC5FD00B97A95 /* HelpView.swift */; };
 		FC34F59028CAC62A00B97A95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F58F28CAC62A00B97A95 /* SettingsView.swift */; };
 		FC34F59228CAC65300B97A95 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59128CAC65300B97A95 /* CollectionsView.swift */; };
-		FC34F59428CAC67900B97A95 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59328CAC67900B97A95 /* NavigationView.swift */; };
+		FC34F59428CAC67900B97A95 /* DirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59328CAC67900B97A95 /* DirectionsView.swift */; };
+		FC34F59828CB94E100B97A95 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59728CB94E100B97A95 /* Visit.swift */; };
+		FC34F59E28CB990100B97A95 /* LogNewVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */; };
+		FC34F5A028D3374500B97A95 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59F28D3374500B97A95 /* HomeButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +34,10 @@
 		FC34F58D28CAC5FD00B97A95 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		FC34F58F28CAC62A00B97A95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FC34F59128CAC65300B97A95 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
-		FC34F59328CAC67900B97A95 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		FC34F59328CAC67900B97A95 /* DirectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsView.swift; sourceTree = "<group>"; };
+		FC34F59728CB94E100B97A95 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
+		FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogNewVisitView.swift; sourceTree = "<group>"; };
+		FC34F59F28D3374500B97A95 /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +69,13 @@
 				FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */,
 				FC34F58928CAA70900B97A95 /* AppData.swift */,
 				FC34F56828C9803A00B97A95 /* HomePageView.swift */,
+				FC34F59F28D3374500B97A95 /* HomeButtonView.swift */,
+				FC34F59628CB94C700B97A95 /* Data Types */,
 				FC34F59528CAC6B400B97A95 /* Transition Views */,
 				FC34F58D28CAC5FD00B97A95 /* HelpView.swift */,
 				FC34F58F28CAC62A00B97A95 /* SettingsView.swift */,
 				FC34F59128CAC65300B97A95 /* CollectionsView.swift */,
-				FC34F59328CAC67900B97A95 /* NavigationView.swift */,
+				FC34F59328CAC67900B97A95 /* DirectionsView.swift */,
 				FC34F56928C9803D00B97A95 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -93,8 +101,17 @@
 			isa = PBXGroup;
 			children = (
 				FC34F58B28CAAA2500B97A95 /* VisitSelectionView.swift */,
+				FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */,
 			);
 			path = "Transition Views";
+			sourceTree = "<group>";
+		};
+		FC34F59628CB94C700B97A95 /* Data Types */ = {
+			isa = PBXGroup;
+			children = (
+				FC34F59728CB94E100B97A95 /* Visit.swift */,
+			);
+			path = "Data Types";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,13 +184,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC34F57928C9803D00B97A95 /* HomePageView.swift in Sources */,
+				FC34F5A028D3374500B97A95 /* HomeButtonView.swift in Sources */,
 				FC34F59228CAC65300B97A95 /* CollectionsView.swift in Sources */,
-				FC34F59428CAC67900B97A95 /* NavigationView.swift in Sources */,
+				FC34F59428CAC67900B97A95 /* DirectionsView.swift in Sources */,
 				FC34F57728C9803D00B97A95 /* TraveloggerApp.swift in Sources */,
 				FC34F58C28CAAA2500B97A95 /* VisitSelectionView.swift in Sources */,
 				FC34F59028CAC62A00B97A95 /* SettingsView.swift in Sources */,
 				FC34F58E28CAC5FD00B97A95 /* HelpView.swift in Sources */,
 				FC34F58A28CAA70900B97A95 /* AppData.swift in Sources */,
+				FC34F59E28CB990100B97A95 /* LogNewVisitView.swift in Sources */,
+				FC34F59828CB94E100B97A95 /* Visit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
