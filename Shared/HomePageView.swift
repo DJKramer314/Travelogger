@@ -9,12 +9,13 @@ import SwiftUI
 import MapKit
 
 struct HomePageView: View {
-	//This below variable is a state variable because it binds to the view when it moves. It will reset itself after each relaunch of the app
-    @State var coordinates = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 2.5, longitudeDelta: 2.5))
 	
 	//Inherited from 'TraveloggerApp'
 	@EnvironmentObject var appData: AppData
-    
+	
+	//This below variable is a state variable because it binds to the view when it moves. It will reset itself after each relaunch of the app
+	@State var coordinates = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 39.8283, longitude: -98.5795), span: MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50))
+	
     //Start of global variables
     let buttonSize: CGFloat = 35
 	let topBarHeight: CGFloat = 120
@@ -23,7 +24,7 @@ struct HomePageView: View {
     var body: some View {
 		ZStack {
 			
-			Map(coordinateRegion: $coordinates, annotationItems: appData.visits) { visit in
+			Map(coordinateRegion: $coordinates, showsUserLocation: true, annotationItems: appData.visits) { visit in
 				MapAnnotation(coordinate:visit.coordinates) {
 					Image(systemName: "figure.wave")
 						.resizable()
@@ -33,7 +34,22 @@ struct HomePageView: View {
 			}
 			
 			VStack {
-				StatsBarView(topBarHeight: topBarHeight)
+				VStack {
+					StatsBarView(topBarHeight: topBarHeight, appData: appData)
+					HStack {
+						Spacer()
+						Button(action: {
+							coordinates.center.latitude = appData.findUserLocation()!.coordinate.latitude
+							coordinates.center.longitude = appData.findUserLocation()!.coordinate.longitude
+						}) {
+							Image(systemName: "location.magnifyingglass")
+								.resizable()
+								.frame(width:40,height:40)
+								.foregroundColor(.blue)
+								.padding()
+						}
+					}
+				}
 				
 				Spacer()
 				
@@ -65,6 +81,8 @@ struct StatsBarView: View {
 	
 	var topBarHeight: CGFloat
 	
+	let appData: AppData
+	
     var body: some View {
         ZStack {
 			
@@ -75,20 +93,20 @@ struct StatsBarView: View {
 				HStack {
 					VStack {
 						Text("Locations")
-						Text("15")
+						Text(String((appData.visits.count)))
 					}
 					Spacer()
 					
 					VStack {
-						Text("Misc")
-						Text("8")
+						Text("Total Visits")
+						Text(String((appData.visits.count)))
 					}
 					
 					Spacer()
 					
 					VStack {
 						Text("Countries")
-						Text("3")
+						Text("TBD")
 					}
 				}
 				.padding()
@@ -121,7 +139,7 @@ struct LogButtonView: View {
 struct BottomRowOfButtonsView: View {
     
     let size: CGFloat
-	var appData: AppData
+	let appData: AppData
     
     var body: some View {
         HStack {
