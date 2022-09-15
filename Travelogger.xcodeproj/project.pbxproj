@@ -20,6 +20,7 @@
 		FC34F59828CB94E100B97A95 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59728CB94E100B97A95 /* Visit.swift */; };
 		FC34F59E28CB990100B97A95 /* LogNewVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */; };
 		FC34F5A028D3374500B97A95 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59F28D3374500B97A95 /* HomeButtonView.swift */; };
+		FC34F5A228D381D500B97A95 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F5A128D381D500B97A95 /* LocationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FC34F59728CB94E100B97A95 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogNewVisitView.swift; sourceTree = "<group>"; };
 		FC34F59F28D3374500B97A95 /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
+		FC34F5A128D381D500B97A95 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				FC34F56728C9803A00B97A95 /* TraveloggerApp.swift */,
 				FC34F58928CAA70900B97A95 /* AppData.swift */,
 				FC34F56828C9803A00B97A95 /* HomePageView.swift */,
+				FC34F5A128D381D500B97A95 /* LocationViewModel.swift */,
 				FC34F59F28D3374500B97A95 /* HomeButtonView.swift */,
 				FC34F59628CB94C700B97A95 /* Data Types */,
 				FC34F59528CAC6B400B97A95 /* Transition Views */,
@@ -191,6 +194,7 @@
 				FC34F58C28CAAA2500B97A95 /* VisitSelectionView.swift in Sources */,
 				FC34F59028CAC62A00B97A95 /* SettingsView.swift in Sources */,
 				FC34F58E28CAC5FD00B97A95 /* HelpView.swift in Sources */,
+				FC34F5A228D381D500B97A95 /* LocationViewModel.swift in Sources */,
 				FC34F58A28CAA70900B97A95 /* AppData.swift in Sources */,
 				FC34F59E28CB990100B97A95 /* LogNewVisitView.swift in Sources */,
 				FC34F59828CB94E100B97A95 /* Visit.swift in Sources */,
@@ -320,6 +324,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Travelogger--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Click 'Allow' to use your current location!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -353,6 +358,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Travelogger--iOS--Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Click 'Allow' to use your current location!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

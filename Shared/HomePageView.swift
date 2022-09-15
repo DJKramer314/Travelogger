@@ -10,7 +10,7 @@ import MapKit
 
 struct HomePageView: View {
 	//This below variable is a state variable because it binds to the view when it moves. It will reset itself after each relaunch of the app
-    @State var coordinates = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State var coordinates = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 2.5, longitudeDelta: 2.5))
 	
 	//Inherited from 'TraveloggerApp'
 	@EnvironmentObject var appData: AppData
@@ -24,7 +24,12 @@ struct HomePageView: View {
 		ZStack {
 			
 			Map(coordinateRegion: $coordinates, annotationItems: appData.visits) { visit in
-				MapMarker(coordinate:visit.coordinates)
+				MapAnnotation(coordinate:visit.coordinates) {
+					Image(systemName: "figure.wave")
+						.resizable()
+						.frame(width:25, height: 50)
+						.foregroundColor(.black)
+				}
 			}
 			
 			VStack {

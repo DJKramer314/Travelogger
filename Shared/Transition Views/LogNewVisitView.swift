@@ -37,6 +37,16 @@ struct LogNewVisitView: View {
 						HStack {
 							TextField("Latitude", text: $latitude)
 							TextField("Longitude", text: $longitude)
+							Button(action: {
+								appData.currentLocationViewModel.locationManager.requestWhenInUseAuthorization()
+								let currentLocation = appData.currentLocationViewModel.locationManager.location
+								latitude = String(currentLocation!.coordinate.latitude)
+								longitude = String(currentLocation!.coordinate.longitude)
+								print("success")
+							}) {
+								Image(systemName: "location.fill")
+									.foregroundColor(Color.blue)
+							}
 						}
 					}, header: {
 						Text("Log New Location")

@@ -13,6 +13,7 @@ import MapKit
 class AppData: ObservableObject {
 	@Published var currentView = "HomePageView"
 	@Published var visits: [Visit]
+	@Published var currentLocationViewModel = LocationViewModel()
 	
 	init() {
 		self.visits = [Visit(locationName: "London", coordinates: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), collections: [], attachmentStrings: [], notes: [Note(content: "I have never been here")]),Visit(locationName: "Near London", coordinates: CLLocationCoordinate2D(latitude: 52.507222, longitude: -0.1275), collections: [], attachmentStrings: [], notes: [Note(content: "I am not sure where this goes")])]
@@ -20,6 +21,18 @@ class AppData: ObservableObject {
 	
 	func newVisit(_ newVisit: Visit) {
 		visits.append(newVisit)
+	}
+	
+	func findAllCollections() -> [String] {
+		var list: [String] = []
+		for visit in visits {
+			for collection in visit.collections {
+				if !list.contains(collection!) {
+					list.append(collection!)
+				}
+			}
+		}
+		return list
 	}
 	
 	func changeViewTo(_ newView: String){
