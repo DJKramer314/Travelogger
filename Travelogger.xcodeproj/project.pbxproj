@@ -21,6 +21,7 @@
 		FC34F59E28CB990100B97A95 /* LogNewVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */; };
 		FC34F5A028D3374500B97A95 /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F59F28D3374500B97A95 /* HomeButtonView.swift */; };
 		FC34F5A228D381D500B97A95 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F5A128D381D500B97A95 /* LocationViewModel.swift */; };
+		FC34F5A428D3AA5000B97A95 /* LogExistingVisitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34F5A328D3AA5000B97A95 /* LogExistingVisitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogNewVisitView.swift; sourceTree = "<group>"; };
 		FC34F59F28D3374500B97A95 /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		FC34F5A128D381D500B97A95 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		FC34F5A328D3AA5000B97A95 /* LogExistingVisitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogExistingVisitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 				FC34F59528CAC6B400B97A95 /* Transition Views */,
 				FC34F58D28CAC5FD00B97A95 /* HelpView.swift */,
 				FC34F58F28CAC62A00B97A95 /* SettingsView.swift */,
+				FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */,
+				FC34F5A328D3AA5000B97A95 /* LogExistingVisitView.swift */,
 				FC34F59128CAC65300B97A95 /* CollectionsView.swift */,
 				FC34F59328CAC67900B97A95 /* DirectionsView.swift */,
 				FC34F56928C9803D00B97A95 /* Assets.xcassets */,
@@ -104,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				FC34F58B28CAAA2500B97A95 /* VisitSelectionView.swift */,
-				FC34F59D28CB990100B97A95 /* LogNewVisitView.swift */,
 			);
 			path = "Transition Views";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC34F5A428D3AA5000B97A95 /* LogExistingVisitView.swift in Sources */,
 				FC34F57928C9803D00B97A95 /* HomePageView.swift in Sources */,
 				FC34F5A028D3374500B97A95 /* HomeButtonView.swift in Sources */,
 				FC34F59228CAC65300B97A95 /* CollectionsView.swift in Sources */,

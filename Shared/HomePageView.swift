@@ -183,6 +183,7 @@ struct BottomRowOfButtonsView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
 		HomePageView()
+			.environmentObject(AppData())
 			.preferredColorScheme(.light)
 			.previewInterfaceOrientation(.portrait)
             

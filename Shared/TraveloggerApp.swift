@@ -28,6 +28,8 @@ struct TraveloggerApp: App {
 				CollectionsView().environmentObject(appData)
 			} else if appData.currentView == "LogNewVisitView"{
 				LogNewVisitView().environmentObject(appData)
+			} else if appData.currentView == "LogExistingVisitView"{
+				LogExistingVisitView().environmentObject(appData)
 			} else {
 				Text("Page not found: " + appData.currentView)
 			}
