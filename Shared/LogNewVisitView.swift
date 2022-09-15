@@ -26,9 +26,8 @@ struct LogNewVisitView: View {
 		VStack {
 			
 			HStack {
-				Spacer()
 				HomeButtonView(appData: appData, color: .accentColor)
-			}.padding(.trailing, 25)
+			}
 			
 			NavigationView() {
 				Form {

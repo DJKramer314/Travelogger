@@ -9,7 +9,8 @@ import Foundation
 import MapKit
 import SwiftUI
 
-struct Visit: Identifiable {
+struct Visit: Identifiable{
+	
 	let id = UUID()
 	let locationName: String
 	let coordinates: CLLocationCoordinate2D
@@ -21,7 +22,8 @@ struct Visit: Identifiable {
 	
 }
 
-struct Note {
+struct Note: Identifiable {
+	let id = UUID()
 	let content: String
 	let date = Date()
 }

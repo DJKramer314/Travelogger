@@ -17,12 +17,10 @@ struct VisitSelectionView: View {
 			
 			VStack{
 				HStack {
-					Spacer()
-					
 					HomeButtonView(appData: appData, color: .white)
 				}
 				Spacer()
-			}.padding(.top, 50).padding(.trailing, 25)
+			}.padding(.top, 50)
 			
 			VStack(spacing: 50) {
 				Button(action:{appData.changeViewTo("LogNewVisitView")}) {
