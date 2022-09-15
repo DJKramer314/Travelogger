@@ -13,7 +13,15 @@ struct CollectionsView: View {
 	
     var body: some View {
 		HomeButtonView(appData: appData, color: .accentColor)
-        Text("Collections View Placeholder")
+		NavigationView {
+			List(appData.visits, id: \.self.id) { visit in
+				NavigationLink(destination: {
+					VisitView(visitData: visit)})
+				{
+					Text(visit.locationName)
+				}
+			}
+		}
     }
 }
 
