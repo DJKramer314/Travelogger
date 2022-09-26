@@ -11,15 +11,21 @@ struct CollectionsView: View {
 	
 	@EnvironmentObject var appData: AppData
 	
+	func delete(at offsets: IndexSet) {
+		appData.visits.remove(atOffsets: offsets)
+	}
+	
     var body: some View {
 		HomeButtonView(appData: appData, color: .accentColor)
 		NavigationView {
-			List(appData.visits, id: \.self.id) { visit in
-				NavigationLink(destination: {
-					VisitView(visitData: visit)})
-				{
-					Text(visit.locationName)
-				}
+			List {
+				ForEach(appData.visits, id: \.self.id) { visit in
+					NavigationLink(destination: {
+						VisitView(visitData: visit)})
+					{
+						Text(visit.locationName)
+					}
+				}.onDelete(perform: delete)
 			}
 		}
     }
