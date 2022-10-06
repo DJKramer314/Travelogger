@@ -16,7 +16,7 @@ struct CollectionsView: View {
 	}
 	
     var body: some View {
-		HomeButtonView(appData: appData, color: .accentColor)
+		HomeButtonView(appData: appData, color: appData.primaryAppColor)
 		NavigationView {
 			List {
 				ForEach(appData.visits, id: \.self.id) { visit in

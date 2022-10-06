@@ -45,7 +45,7 @@ struct HomePageView: View {
 							Image(systemName: "location.magnifyingglass")
 								.resizable()
 								.frame(width:40,height:40)
-								.foregroundColor(.blue)
+								.foregroundColor(appData.primaryAppColor)
 								.padding()
 						}
 					}
@@ -61,7 +61,7 @@ struct HomePageView: View {
 					
 				}
 				.padding(bottomPadding)
-				.foregroundColor(Color.accentColor)
+				.foregroundColor(appData.primaryAppColor)
 			}
 		}
 		.edgesIgnoringSafeArea(.all)
@@ -87,7 +87,7 @@ struct StatsBarView: View {
         ZStack {
 			
 			Rectangle()
-				.foregroundColor(Color.accentColor)
+				.foregroundColor(appData.primaryAppColor)
 			VStack {
 				Spacer()
 				HStack {

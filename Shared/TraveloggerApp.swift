@@ -9,7 +9,13 @@ import SwiftUI
 
 @main
 struct TraveloggerApp: App {
-	@StateObject var appData = AppData()
+	@StateObject var appData = getAppData()
+	
+	
+	static func getAppData() -> AppData {
+		return AppData()
+	}
+	
     var body: some Scene {
         WindowGroup {
 			

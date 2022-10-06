@@ -11,7 +11,7 @@ struct LogExistingVisitView: View {
 	@EnvironmentObject var appData: AppData
 	
 	var body: some View {
-		HomeButtonView(appData: appData, color: .accentColor)
+		HomeButtonView(appData: appData, color: appData.primaryAppColor)
 		Text("Log Existing Visit View Placeholder")
 	}
 }

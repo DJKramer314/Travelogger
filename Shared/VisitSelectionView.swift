@@ -13,7 +13,7 @@ struct VisitSelectionView: View {
 	
     var body: some View {
 		ZStack{
-			Color.accentColor
+			appData.primaryAppColor
 			
 			VStack{
 				HStack {

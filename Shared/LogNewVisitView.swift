@@ -26,7 +26,7 @@ struct LogNewVisitView: View {
 		VStack {
 			
 			HStack {
-				HomeButtonView(appData: appData, color: .accentColor)
+				HomeButtonView(appData: appData, color: appData.primaryAppColor)
 			}
 			
 			NavigationView() {
