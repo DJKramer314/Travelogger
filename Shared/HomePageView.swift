@@ -55,7 +55,7 @@ struct HomePageView: View {
 				
 				VStack(spacing: 30) {
 					
-					LogButtonView(size: buttonSize+25, appData: appData)
+					LogButtonView(size: buttonSize+25).environmentObject(appData)
 					
 					BottomRowOfButtonsView(size: buttonSize, appData: appData)
 					
@@ -120,7 +120,7 @@ struct StatsBarView: View {
 struct LogButtonView: View {
 	
 	let size: CGFloat
-	var appData: AppData
+	@EnvironmentObject var appData: AppData
 	
     var body: some View {
 		Button(action: {

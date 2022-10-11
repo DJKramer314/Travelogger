@@ -20,7 +20,7 @@ class AppData: ObservableObject {
 	init() {
 		self.visits = [Visit(locationName: "Denmark", coordinates: CLLocationCoordinate2D(latitude: 20, longitude: 10), collections: ["Country", "Cold"], attachmentStrings: [], notes: [Note(content: "This is the most gorgeous place that I have ever visited!")]), Visit(locationName: "New Zealand", coordinates: CLLocationCoordinate2D(latitude: 50, longitude: 20), collections: ["Country", "Warm"], attachmentStrings: [], notes: [Note(content: "This visit was very special -- we met a friend at the beach")])]
 		self.currentLocationViewModel = LocationViewModel()
-		self.primaryAppColor = Color.accentColor
+		self.primaryAppColor = Color(red: 66/255, green: 133/255, blue: 91/255) //Default greenish color
 		self.startingLocation = findUserLocation()
 	}
 	
