@@ -12,7 +12,17 @@ struct LogExistingVisitView: View {
 	
 	var body: some View {
 		HomeButtonView(appData: appData, color: appData.primaryAppColor)
-		Text("Log Existing Visit View Placeholder")
+		NavigationView {
+			List {
+				ForEach(appData.visits, id: \.self.id) { visit in
+					NavigationLink(destination: {
+						VisitView(visitData: visit)})
+					{
+						Text(visit.locationName)
+					}
+				}
+			}
+		}
 	}
 }
 

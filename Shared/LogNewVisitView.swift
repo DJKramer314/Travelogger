@@ -41,7 +41,6 @@ struct LogNewVisitView: View {
 								let currentLocation = appData.currentLocationViewModel.locationManager.location
 								latitude = String(currentLocation!.coordinate.latitude)
 								longitude = String(currentLocation!.coordinate.longitude)
-								print("success")
 							}) {
 								Image(systemName: "location.fill")
 									.foregroundColor(Color.blue)
