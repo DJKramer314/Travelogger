@@ -13,14 +13,14 @@ struct VisitSelectionView: View {
 	
     var body: some View {
 		ZStack{
-			appData.primaryAppColor
+			appData.primaryAppColor.edgesIgnoringSafeArea(.all)
 			
 			VStack{
 				HStack {
 					HomeButtonView(appData: appData, color: .white)
 				}
 				Spacer()
-			}.padding(.top, 50)
+			}
 			
 			VStack(spacing: 50) {
 				Button(action:{appData.changeViewTo("LogNewVisitView")}) {
@@ -31,6 +31,7 @@ struct VisitSelectionView: View {
 					}
 				}
 				.frame(height:100)
+				
 				Button(action:{appData.changeViewTo("LogExistingVisitView")}) {
 					ZStack {
 						RoundedRectangle(cornerRadius: 25)
@@ -40,7 +41,6 @@ struct VisitSelectionView: View {
 				}
 				.frame(height:100)
 			}
-			.padding(50)
-		}.edgesIgnoringSafeArea(.all)
+		}
     }
 }

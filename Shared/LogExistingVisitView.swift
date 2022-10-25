@@ -16,7 +16,8 @@ struct LogExistingVisitView: View {
 			List {
 				ForEach(appData.visits, id: \.self.id) { visit in
 					NavigationLink(destination: {
-						VisitView(visitData: visit)})
+						//A view to log a visit to an existing location
+						Text("Work in progress")})
 					{
 						Text(visit.locationName)
 					}
